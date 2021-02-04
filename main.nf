@@ -1,6 +1,6 @@
-params.run_csv = "/home/tautvydaspetkus/nextflow_azure_demo/resources/run_2.csv"
-params.publish_dir = "/home/tautvydaspetkus/nextflow_azure_demo/output"
-params.resources_dir = "resources"
+params.run_csv = "resources/run_2.csv"
+params.publish_dir = "output"
+
 Channel
     .fromPath( params.run_csv )
     .splitCsv(header:true)
