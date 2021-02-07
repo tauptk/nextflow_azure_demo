@@ -1,3 +1,7 @@
 content,style,iterations
-resources/raccoon_small_2.jpeg,resources/van_gogh_1.jpeg,10
-resources/raccoon_small_2.jpeg,resources/van_gogh_2.jpeg,10
+resources/raccoon_small_2.jpeg,resources/van_gogh_1.jpeg,1000
+resources/raccoon_small_2.jpeg,resources/van_gogh_2.jpeg,1000
+resources/raccoon_small_2.jpeg,resources/van_gogh_3.jpeg,1000
+resources/raccoon_small_2.jpeg,resources/van_gogh_4.jpeg,1000
+resources/raccoon_small_2.jpeg,resources/van_gogh_5.jpeg,1000
+resources/raccoon_small_2.jpeg,resources/van_gogh_6.jpeg,1000
