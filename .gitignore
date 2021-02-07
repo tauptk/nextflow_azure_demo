@@ -351,3 +351,5 @@ MigrationBackup/
 
 .nextflow/
 .nextflow.log*
+.cheatsheet
+.nextflow.config.cheatsheet
