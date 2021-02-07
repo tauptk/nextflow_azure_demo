@@ -1,21 +1,21 @@
 dotnet run \
 --output /home/tautvydaspetkus/nextflow_azure_demo/output/composition.bmp \
 -i \
-/home/tautvydaspetkus/nextflow_azure_demo/resources/raccoon_small_2.jpeg,\
+/home/tautvydaspetkus/nextflow_azure_demo/resources/raccoon_small_1.jpg,\
 /home/tautvydaspetkus/nextflow_azure_demo/resources/van_gogh_1.jpeg,\
-/home/tautvydaspetkus/nextflow_azure_demo/output/raccoon_small_2_van_gogh_1.jpeg,\
-/home/tautvydaspetkus/nextflow_azure_demo/resources/raccoon_small_2.jpeg,\
+/home/tautvydaspetkus/nextflow_azure_demo/output/raccoon_small_van_gogh_1.jpeg,\
+/home/tautvydaspetkus/nextflow_azure_demo/resources/raccoon_small_1.jpg,\
 /home/tautvydaspetkus/nextflow_azure_demo/resources/van_gogh_2.jpeg,\
-/home/tautvydaspetkus/nextflow_azure_demo/output/raccoon_small_2_van_gogh_2.jpeg,\
-/home/tautvydaspetkus/nextflow_azure_demo/resources/raccoon_small_2.jpeg,\
+/home/tautvydaspetkus/nextflow_azure_demo/output/raccoon_small_van_gogh_2.jpeg,\
+/home/tautvydaspetkus/nextflow_azure_demo/resources/raccoon_small_1.jpg,\
 /home/tautvydaspetkus/nextflow_azure_demo/resources/van_gogh_3.jpeg,\
-/home/tautvydaspetkus/nextflow_azure_demo/output/raccoon_small_2_van_gogh_3.jpeg,\
-/home/tautvydaspetkus/nextflow_azure_demo/resources/raccoon_small_2.jpeg,\
+/home/tautvydaspetkus/nextflow_azure_demo/output/raccoon_small_van_gogh_3.jpeg,\
+/home/tautvydaspetkus/nextflow_azure_demo/resources/raccoon_small_1.jpg,\
 /home/tautvydaspetkus/nextflow_azure_demo/resources/van_gogh_4.jpeg,\
-/home/tautvydaspetkus/nextflow_azure_demo/output/raccoon_small_2_van_gogh_4.jpeg,\
-/home/tautvydaspetkus/nextflow_azure_demo/resources/raccoon_small_2.jpeg,\
+/home/tautvydaspetkus/nextflow_azure_demo/output/raccoon_small_van_gogh_4.jpeg,\
+/home/tautvydaspetkus/nextflow_azure_demo/resources/raccoon_small_1.jpg,\
 /home/tautvydaspetkus/nextflow_azure_demo/resources/van_gogh_5.jpeg,\
-/home/tautvydaspetkus/nextflow_azure_demo/output/raccoon_small_2_van_gogh_5.jpeg,\
-/home/tautvydaspetkus/nextflow_azure_demo/resources/raccoon_small_2.jpeg,\
+/home/tautvydaspetkus/nextflow_azure_demo/output/raccoon_small_van_gogh_5.jpeg,\
+/home/tautvydaspetkus/nextflow_azure_demo/resources/raccoon_small_1.jpg,\
 /home/tautvydaspetkus/nextflow_azure_demo/resources/van_gogh_6.jpeg,\
-/home/tautvydaspetkus/nextflow_azure_demo/output/raccoon_small_2_van_gogh_6.jpeg
+/home/tautvydaspetkus/nextflow_azure_demo/output/raccoon_small_van_gogh_6.jpeg
