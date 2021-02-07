@@ -14,17 +14,19 @@ process neural_stylization {
     set file(content), file(style), iterations from neural_stylization_run_ch
 
     output:
-    set file(content), file(style), file(output) into neural_stylization_output_ch
+    set file(content_unique_name), file(style), file(output) into neural_stylization_output_ch
  
     script:
     script = "/app/neural_style.py"
     model = "/app/imagenet-vgg-verydeep-19.mat"
-    output = "${content.baseName}_${style.baseName}.jpeg"
+    content_unique_name = "${content.baseName}_${style.baseName}_input.jpeg"
+    output = "${content.baseName}_${style.baseName}_output.jpeg"
 
     """
+    cp ${content} ${content_unique_name}
     python ${script} \
         --network ${model} \
-        --content ${content} \
+        --content ${content_unique_name} \
         --styles ${style} \
         --output ${output} \
         --iterations ${iterations}
@@ -39,10 +41,10 @@ neural_stylization_output_ch
 process create_composition {
     publishDir params.publish_dir, mode: 'copy', overwrite: true
     
-    container 'nextflowazuredemoregistry.azurecr.io/nextflow_azure_demo/composition_app:0.0.1'
+    container 'nextflowazuredemoregistry.azurecr.io/nextflow_azure_demo/composition_app:0.0.2'
 
     input:
-    file(input_file) from composition_input_ch
+    file(input_file) from composition_input_ch.collect()
 
     output:
     file(composition_output) into composition_output_ch
@@ -55,7 +57,7 @@ process create_composition {
 
     """
     dotnet ${script} \
-        --output ${output} \
+        --output ${composition_output} \
         -i ${input_files} \
         -c ${row_length}
     """
