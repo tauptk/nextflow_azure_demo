@@ -1,6 +1,3 @@
-params.run_csv = "resources/run_2.csv"
-params.publish_dir = "output"
-
 Channel
     .fromPath( params.run_csv )
     .splitCsv(header:true)
@@ -8,8 +5,6 @@ Channel
     .set{ neural_stylization_run_ch }
 
 process neural_stylization {
-    container 'nextflowazuredemoregistry.azurecr.io/neural-style:0.0.1'
-
     input:
     set file(content), file(style), iterations from neural_stylization_run_ch
 
@@ -41,8 +36,6 @@ neural_stylization_output_ch
 process create_composition {
     publishDir params.publish_dir, mode: 'copy', overwrite: true
     
-    container 'nextflowazuredemoregistry.azurecr.io/nextflow_azure_demo/composition_app:0.0.2'
-
     input:
     file(input_file) from composition_input_ch.collect()
 
