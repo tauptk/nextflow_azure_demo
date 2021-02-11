@@ -21,11 +21,8 @@ To set up nextflow workstation, several things are needed:
 
 * Master remote workstation. Since we are not going to run any of nextflow 
 processes locally, we will be creating a remote workstation, which will serve
-us as a central hub for all our operations. There, we will have access to
-kubernetes services
-* Cloud storage. If we want to run nextflow in kubernetes, we need a persitant storage, shared accross our pods. For that, NFS storage is required, which will hold our code, nextflow work directories and store output
-* Kubernetes cluster. If we want to distribute our pipeline jobs to pods,
-scaling with our pipeline depending on job needs, setting up kubernetes cluster is advised. 
+us as a central hub for all our operations. 
+* Cloud storage. Storage, separate from VM is recommended, which will hold our code, nextflow work directories and store output
 
 ### Setting up an account
 
