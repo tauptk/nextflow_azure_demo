@@ -9,20 +9,22 @@ process neural_stylization {
     set file(content), file(style), iterations from neural_stylization_run_ch
 
     output:
-    set file(content_unique_name), file(style), file(output) into neural_stylization_output_ch
+    set file(content_unique_name), file(style_unique_name), file(output) into neural_stylization_output_ch
  
     script:
     script = "/app/neural_style.py"
     model = "/app/imagenet-vgg-verydeep-19.mat"
-    content_unique_name = "${content.baseName}_${style.baseName}_input.jpeg"
-    output = "${content.baseName}_${style.baseName}_output.jpeg"
+    content_unique_name = "${content.baseName}_${style.baseName}_${iterations}_input.jpeg"
+    style_unique_name = "${content.baseName}_${style.baseName}_${iterations}_style.jpeg"
+    output = "${content.baseName}_${style.baseName}_${iterations}_output.jpeg"
 
     """
     cp ${content} ${content_unique_name}
+    cp ${style} ${style_unique_name}
     python ${script} \
         --network ${model} \
         --content ${content_unique_name} \
-        --styles ${style} \
+        --styles ${style_unique_name} \
         --output ${output} \
         --iterations ${iterations}
     """
